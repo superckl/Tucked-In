@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+license="See GitHub repository for details"
+
+[[mods]]
+modId="tuckedin"
+version="${version}"
+displayName="Bed Fix"
+authors="superckl"
+description="Expands the range at which you can sleep in a bed."
+
+[[dependencies.prayers]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.prayers]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version}"
+    ordering="NONE"
+    side="BOTH"

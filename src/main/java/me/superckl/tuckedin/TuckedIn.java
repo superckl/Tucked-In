@@ -1,5 +1,6 @@
 package me.superckl.tuckedin;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.LogManager;
 
 import net.minecraft.entity.player.PlayerEntity;
@@ -9,7 +10,10 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.RayTraceResult.Type;
 import net.minecraftforge.common.ForgeMod;
+import net.minecraftforge.fml.ExtensionPoint;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.network.FMLNetworkConstants;
 
 @Mod(TuckedIn.MOD_ID)
 public class TuckedIn {
@@ -18,6 +22,7 @@ public class TuckedIn {
 
 	public TuckedIn() {
 		LogHelper.setLogger(LogManager.getFormatterLogger(TuckedIn.MOD_ID));
+		ModLoadingContext.get().registerExtensionPoint(ExtensionPoint.DISPLAYTEST, () -> Pair.of(() -> FMLNetworkConstants.IGNORESERVERONLY, (a, b) -> true));
 	}
 
 	/**

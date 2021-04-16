@@ -1,11 +1,12 @@
 modLoader="javafml"
 loaderVersion="[32,)"
 license="See GitHub repository for details"
+logoFile="logo.png"
 
 [[mods]]
 modId="tuckedin"
 version="${version}"
-displayName="Bed Fix"
+displayName="Tucked In"
 authors="superckl"
 description="Expands the range at which you can sleep in a bed."
 
